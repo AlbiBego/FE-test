@@ -1,0 +1,167 @@
+body {
+  background-color: gray;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#whole-page {
+  background-color: aqua;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column; /* Ensures the footer is always at the bottom */
+  min-height: 100vh; /* Minimum height of the whole page */
+}
+
+header, footer {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5px; /* Considered in the calculations below */
+  overflow: hidden; /* Prevents overflow of content outside the grid */
+}
+
+.image-large {
+  grid-column: 1 / 2;
+  width: 100%;
+  height: calc(100% + 5px); /* Adjusting for the gap */
+  object-fit: cover;
+}
+
+.image-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: calc(100% - 5px); /* Ensure total height matches the left image, adjusting for the gap */
+}
+
+.image-small {
+  flex: 1; /* This makes both images share the available space equally */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+footer {
+  margin-top: auto; /* Pushes the footer to the bottom of the viewport */
+}
+
+@media (max-width: 468px) {
+  .image-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .image-large, .image-stack {
+      grid-column: 1;
+  }
+
+  .image-stack {
+      flex-direction: column;
+  }
+}
+
+#products-section {
+  display: flex;
+  justify-content: space-around; /* Distributes space evenly between items */
+  align-items: stretch; /* Ensures all product divs are of equal height */
+  padding: 20px;
+  gap: 20px; /* Optional: adds space between items */
+  width: 90%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the items horizontally */
+  justify-content: space-between; /* Distributes space evenly vertically */
+  flex: 1; /* Makes all product divs take equal width */
+  padding: 10px;
+  background-color: white; /* Optional: sets a background color */
+  border: 1px solid #ccc; /* Optional: adds a border */
+  max-width: 10%;
+}
+
+.product h2 {
+  margin: 10px 0; /* Spacing above and below the title */
+}
+
+.product img {
+  width: 100%; /* Makes the image fill the container width */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.product button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer; /* Gives a pointer cursor on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 468px) {
+  #products-section {
+      flex-direction: column; /* Stacks the products vertically on smaller screens */
+  }
+}
+
+#new-products-section header h2 {
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+
+.products-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+.products-container .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 1 1 180px; /* Controls growing and shrinking, also sets basis */
+  max-width: 20%; /* Maximum width for each product on larger screens */
+}
+
+.products-container .product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-price {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.product-name {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 468px) {
+  .products-container {
+      flex-direction: column;
+  }
+
+  .products-container .product {
+      max-width: 100%; /* Allows each product to take full width on smaller screens */
+  }
+}
+

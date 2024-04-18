@@ -1,0 +1,58 @@
+.image-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5px; /* Considered in the calculations below */
+  overflow: hidden; /* Prevents overflow of content outside the grid */
+  margin-bottom: 1vh;
+}
+
+.image-large {
+  grid-column: 1 / 2;
+  width: 100%;
+  height: calc(100% + 5px); /* Adjusting for the gap */
+  object-fit: cover;
+}
+
+.image-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: calc(100% - 5px); /* Ensure total height matches the left image, adjusting for the gap */
+}
+
+.image-small {
+  flex: 1; /* This makes both images share the available space equally */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+footer {
+  margin-top: auto; /* Pushes the footer to the bottom of the viewport */
+}
+
+@media (max-width: 468px) {
+  #whole-page{
+    width: 100%;
+  }
+
+  .image-grid {
+      grid-template-columns: 1fr;
+      
+  }
+
+  .image-large, .image-stack {
+      grid-column: 1;
+  }
+
+  .image-stack {
+      flex-direction: column;
+      gap:2.6vh;
+  }
+
+  .image-large{
+    height: 28vh;
+    margin-bottom: 0.6vh;
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>PainfulPleasures</title>
+    <link rel="icon" type="img/x-icon" href="project resources/Alecive-Flatwoken-Apps-Stopwatch.512.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="hero-section.css">
+    <link rel="stylesheet" type="text/css" href="products-section.css">
+    <link rel="stylesheet" type="text/css" href="new-products-section.css">
+    <link rel="stylesheet" type="text/css" href="general.css">
+</head>
+
+<body>
+
+    <div id="whole-page">
+
+        <header>header</header>
+
+        <section>
+            <div class="image-grid">
+                <div class="image-stack">
+                  <img src="http://via.placeholder.com/2550x550" alt="Large Image" class="image-large">
+                </div>
+                <div class="image-stack">
+                    <img src="http://via.placeholder.com/2550x550" alt="Small Top Image" class="image-small">
+                    <img src="http://via.placeholder.com/2550x550" alt="Small Bottom Image" class="image-small">
+                </div>
+            </div>
+        </section>
+
+        <section id="products-section">
+          <div class="product">
+              <p class="products-category">Tattoo Supplies</p>
+              <img src="https://via.placeholder.com/200x150" alt="Tattoo Supplies">
+              <button>Shop Now</button>
+          </div>
+          <div class="product">
+              <p class="products-category">Body Jewelry</p>
+              <img src="https://via.placeholder.com/200x150" alt="Body Jewelry">
+              <button>Shop Now</button>
+          </div>
+          <div class="product">
+              <p class="products-category">Piercing Supplies</p>
+              <img src="https://via.placeholder.com/200x150" alt="Piercing Supplies">
+              <button>Shop Now</button>
+          </div>
+          <div class="product">
+              <p class="products-category">Medical Supplies</p>
+              <img src="https://via.placeholder.com/200x150" alt="Medical Supplies">
+              <button>Shop Now</button>
+          </div>
+          <div class="product">
+              <p class="products-category">Permanent Makeup</p>
+              <img src="https://via.placeholder.com/200x150" alt="Permanent Makeup">
+              <button>Shop Now</button>
+          </div>
+      </section>
+    
+      <section id="new-products-section">
+        <header>
+            <p id="new-products-title">New Products</p>
+        </header>
+        <div class="carousel-container">
+            <div class="products-container" id="products-container-1">
+                <div class="new-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <div class="product-price">$39.99</div>
+                    <div class="product-name">Product 1</div>
+                </div>
+                <div class="new-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <div class="product-price">$19.99</div>
+                    <div class="product-name">Product 2</div>
+                </div>
+                <div class="new-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <div class="product-price">$49.99</div>
+                    <div class="product-name">Product 3</div>
+                </div>
+                <div class="new-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <div class="product-price">$59.99</div>
+                    <div class="product-name">Product 4</div>
+                </div>
+                <div class="new-product">
+                  <img src="https://via.placeholder.com/150" alt="Product">
+                  <div class="product-price">$59.99</div>
+                  <div class="product-name">Product 5</div>
+              </div>
+            </div>
+            <div class="products-container" id="products-container-2" style="display: none;">
+                <div class="new-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <div class="product-price">$39.99</div>
+                    <div class="product-name">Product 6</div>
+                </div>
+                <div class="new-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <div class="product-price">$19.99</div>
+                    <div class="product-name">Product 7</div>
+                </div>
+                <div class="new-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <div class="product-price">$49.99</div>
+                    <div class="product-name">Product 8</div>
+                </div>
+                <div class="new-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <div class="product-price">$59.99</div>
+                    <div class="product-name">Product 9</div>
+                </div>
+                <div class="new-product">
+                  <img src="https://via.placeholder.com/150" alt="Product">
+                  <div class="product-price">$59.99</div>
+                  <div class="product-name">Product 10</div>
+              </div>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="switchProducts(1)"></span>
+                <span class="dot" onclick="switchProducts(2)"></span>
+            </div>
+        </div>
+    </section>
+    
+        <footer>footer</footer>
+
+    </div>
+
+    <script src="homepage.js"></script>
+
+</body>
+
+</html>
